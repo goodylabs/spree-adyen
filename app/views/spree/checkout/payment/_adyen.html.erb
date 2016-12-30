@@ -17,10 +17,7 @@
   }
 %>
 
-<%= link_to "Pay with Adyen", ::Adyen::Form.redirect_url(
-      Rails.env.development? ? redirect_params.merge(:resURL => adyen_confirmation_url) : redirect_params
-  )
-%>
+<%= link_to "Pay with Adyen", ::Adyen::Form.redirect_url(redirect_params) %>
 
 <script type="text/javascript">
 $(function() {
